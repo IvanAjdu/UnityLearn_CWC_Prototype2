@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject player;
+    public GameObject projectilePrefab;
 
     public float horizontalInput;
     public float verticalInput;
@@ -49,6 +50,12 @@ public class PlayerController : MonoBehaviour
         if (transform.position.z > zRange)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
+        }
+
+        //instantiate food
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("SPACE");
         }
     }
 }
