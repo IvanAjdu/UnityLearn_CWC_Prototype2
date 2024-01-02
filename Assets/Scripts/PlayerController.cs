@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
         //instantiate food
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("SPACE");
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
 }
