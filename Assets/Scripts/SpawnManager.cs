@@ -20,6 +20,7 @@ public class SpawnManager : MonoBehaviour
     {
     }
 
+    //method to spawn a rondom animal in a random x position.
     void SpawnRandomAnimal()
     {
         int animalIndex = Random.Range(0, animalToSpawn.Length);

@@ -13,9 +13,17 @@ public class DestroyOnBound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z < BottomBound || transform.position.z > TopBound)
+
+        //destroy gameobjects over zTopBound. Destroy and show GAME OVER when under BottomBound.
+        if (transform.position.z > TopBound)
         {
             Destroy(gameObject);
         }
+        else if (transform.position.z < BottomBound)
+        {
+            Destroy(gameObject);
+            Debug.Log("GAME OVER");
+        }
+
     }
 }
